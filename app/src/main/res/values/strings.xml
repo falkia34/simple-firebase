@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Simple Firebase</string>
+    <string name="google_web_client_id">1088654099511-2dnfkd66bhejig93ohr5eb4t7bom1q4j.apps.googleusercontent.com</string>
+    <string name="btn_sign_in">Sign In with Google</string>
 </resources>
