@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Set up NavController and configure the start destination
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController

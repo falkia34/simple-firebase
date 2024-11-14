@@ -4,11 +4,36 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- Header untuk menampilkan email dan tombol logout -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="User Email"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/headerLayout"
         android:layout_above="@+id/fabAddTodo"
         android:paddingBottom="80dp" />
 

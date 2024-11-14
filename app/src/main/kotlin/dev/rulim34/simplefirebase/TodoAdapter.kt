@@ -8,8 +8,10 @@ import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class TodoAdapter(private val todos: MutableList<Todo>, private val onDelete: (String) -> Unit) :
-    RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+class TodoAdapter(
+    private val todos: MutableList<Todo>,
+    private val onDelete: (String) -> Unit
+) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
     inner class TodoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val todoText: TextView = view.findViewById(R.id.textTodo)
@@ -21,6 +23,9 @@ class TodoAdapter(private val todos: MutableList<Todo>, private val onDelete: (S
             todoCheck.isChecked = todo.checked
 
             deleteButton.setOnClickListener { onDelete(todo.id) }
+
+            todoCheck.setOnCheckedChangeListener { _, isChecked ->
+            }
         }
     }
 
